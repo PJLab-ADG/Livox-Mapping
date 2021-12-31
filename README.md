@@ -1,6 +1,8 @@
 # Livox-Mapping
 
-This repository implements an all-in-one and ready-to-use LiDAR-inertial odometry system for Livox LiDAR. The system is developed based on the open-source odometry framework [**LIO-Livox**](https://github.com/Livox-SDK/LIO-Livox) to get the odometry information in our front-end part. Besides, we have added more constraints and features to enhance the mapping performance. We are also going to release the **Livox-Localization** in the near future, if needed.
+This repository implements an all-in-one and ready-to-use LiDAR-inertial odometry system for Livox LiDAR. The system is developed based on the open-source odometry framework [**LIO-Livox**](https://github.com/Livox-SDK/LIO-Livox) to get the odometry information in our front-end part. Besides, we have added more constraints and features to enhance the mapping performance. 
+
+At the same time, we provide you one simple lidar-map based localization module in [Livox-Localization](https://github.com/SiyuanHuang95/Livox-Localization).
 
 ![Livox_Mapping](images/lio_livox_mapping_down.gif)
 
@@ -157,7 +159,22 @@ roslaunch livox_odometry livox_odometry.launch save_path:="PATH_TO_SAVE_ODOM_RES
 
 - Play one new rosbag.
 
-## 5. Acknowledgments
+
+
+## 5. Datasets
+
+For the ease of usage, we are providing several test rosbags collected in one industrial park located in Shanghai. Please be aware that all codes and datasets included in this repository are for academic research purposes only. Other usages are **NOT** encouraged, and it is at your own risk. If You have any concerns including privacy, please contact us by sending an e-mail to huangsiyuan@pjlab.org.cn
+
+The dataset can be downloaded through the Baidu Netdisk with:
+
+```shell
+Link：https://pan.baidu.com/s/17ElBOWiFVr68975FtXY8ZA 
+Passwort：pjop
+```
+
+
+
+## 6. Acknowledgments
 
 Thanks for the authors of **[LIO-Livox](https://github.com/Livox-SDK/LIO-Livox),** [**ScanContext**](https://github.com/irapkaist/scancontext)，[**Fast-LIO-SLAM**](https://github.com/gisbi-kim/FAST_LIO_SLAM) and  [**interactive_slam**](https://github.com/SMRT-AIST/interactive_slam).
 
