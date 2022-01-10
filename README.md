@@ -122,14 +122,14 @@ catkin_make
 # If you don't have the GPS data
 cd ~/catkin_ws
 source devel/setup.bash
-roslaunch livox_mapping Livox_mapping.launch save_path:="PATH_TO_SAVE_SLAM_POSE_RESULT"
+roslaunch livox_mapping livox_mapping.launch save_path:="PATH_TO_SAVE_SLAM_POSE_RESULT"
 ```
 
 ```shell
 # If you have the GPS data
 cd ~/catkin_ws
 source devel/setup.bash
-roslaunch livox_mapping Livox_mapping.launch useRTK:="true" save_path:="PATH_TO_SAVE_SLAM_POSE_RESULT"
+roslaunch livox_mapping livox_mapping.launch useRTK:="true" save_path:="PATH_TO_SAVE_SLAM_POSE_RESULT"
 ```
 
 - In another terminal, launch the **odometry thread**
