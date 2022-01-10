@@ -169,7 +169,7 @@ The dataset can be downloaded through the Baidu Netdisk with:
 
 ```shell
 Link：https://pan.baidu.com/s/17ElBOWiFVr68975FtXY8ZA 
-Passwort：pjop
+Password：pjop
 ```
 
 

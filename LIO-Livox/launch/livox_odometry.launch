@@ -21,5 +21,5 @@
 
     </node>
 
-    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find lio_livox)/rviz_cfg/lio.rviz" />
+    <!-- <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find lio_livox)/rviz_cfg/lio.rviz" /> -->
 </launch>

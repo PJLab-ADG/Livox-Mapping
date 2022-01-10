@@ -18,7 +18,7 @@
     <!-- Save path Parameter of odometry -->
     <arg name="save_path" default="lio_livox_slam.txt"/>
     <param name="save_path" value="$(arg save_path)"/>
-    <param name="save_pcd_path" value="$(find aloam_velodyne)/PCD/"/>
+    <param name="save_pcd_path" value="$(find livox_mapping)/PCD/"/>
     <!-- If use RTK -->
     <arg name="useRTK" default="false"/>
     <param name="useRTK" value="$(arg useRTK)"/>
@@ -35,7 +35,7 @@
     <!-- visulaization -->
     <arg name="rvizscpgo" default="true" />
     <group if="$(arg rvizscpgo)">
-        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizscpgo" args="-d $(find aloam_velodyne)/rviz_cfg/aloam_velodyne.rviz" />
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizscpgo" args="-d $(find livox_mapping)/rviz_cfg/livox_mapping.rviz" />
     </group>
 
 </launch>

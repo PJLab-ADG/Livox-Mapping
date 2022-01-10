@@ -611,7 +611,7 @@ void process_pg()
             fullResBuf.pop();
 
             Pose6D pose_curr = getOdom(odometryBuf.front());
-            keyframeTimesOri.push_back(odometryBuf.front()->header.stamp);
+            ros::Time time_stamp = odometryBuf.front()->header.stamp;
             odometryBuf.pop();
             mBuf.unlock(); 
 
@@ -623,7 +623,7 @@ void process_pg()
                   rtkBuf.front()->header.stamp.toSec() > timeLaserOdometry) {
                   std::cout << "rtk data is abnormal" << std::endl;
                   std::cout << "rtk's front time is " << rtkBuf.front()->header.stamp << std::endl;
-                  std::cout << "odo's front time is " << keyframeTimesOri.back() << std::endl;
+                  std::cout << "odo's front time is " << time_stamp << std::endl;
                   std::cout << "rtk's back time is " << rtkBuf.back()->header.stamp << std::endl;
                   std::cout << "rtk's size is " << rtkBuf.size() << std::endl;
                   rtkBufLock.unlock();
@@ -692,7 +692,7 @@ void process_pg()
               if (rtkOffsetInitialized) {
                 pose_curr = convertOdomToENU(pose_curr);
               } else {
-                std::cout << "rtk's Initialize is abnormal" << keyframeTimesOri.back() << std::endl;
+                std::cout << "rtk's Initialize is abnormal" << time_stamp << std::endl;
                 break;
               }
             }
@@ -708,6 +708,7 @@ void process_pg()
             keyframePoses.push_back(pose_curr);
             keyframePosesUpdated.push_back(pose_curr); // init
             keyframeTimes.push_back(timeLaserOdometry);
+            keyframeTimesOri.push_back(time_stamp);
             scManager.makeAndSaveScancontextAndKeys(*thisKeyFrameDS);
             laserCloudMapPGORedraw = true;
             mKF.unlock(); 
