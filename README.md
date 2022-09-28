@@ -97,7 +97,7 @@ xhost +
 
 ```shell
 cd ~/catkin_ws/src
-git clone https://github.com/PJLab-ADG/LIO_Livox_SLAM.git
+git clone https://github.com/PJLab-ADG/Livox-Mapping.git
 cd ..
 catkin_make
 ```
