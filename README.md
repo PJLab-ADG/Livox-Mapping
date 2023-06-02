@@ -181,5 +181,6 @@ Thanks for the authors of **[LIO-Livox](https://github.com/Livox-SDK/LIO-Livox),
 ## Contact
 
 - If you have any questions, contact here please
-  - Send email to huangsiyuan@pjlab.org.cn or zhaoxudong@pjlab.org.cn
-  - Report issues on GitHub.
+  - Send email to shibotian@pjlab.org.cn [Preferred] or huangsiyuan@pjlab.org.cn.
+  - Report issues on GitHub [Preferred].
+  - For other coorperation possibilities, please contact shibotian@pjlab.org.cn [Preferred].
